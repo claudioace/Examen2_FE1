@@ -1,0 +1,100 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Be Vietnam Pro', sans-serif;
+
+
+    /*Ayuda visual. Comentar al terminar*/
+    border: 0.1px dashed red;
+}
+.flex-hd{
+/*este Flex es para el header. NO modificará su direction al cambiar el viewport*/
+    display: flex;
+}
+.flex{
+/*este Flex general. Modificará su direction al cambiar el viewport. de row -> column.*/
+    display: flex;
+}
+
+img{
+    width: 100%;
+}
+/*======Elementos del Header (y otros relacioandos)=====*/
+header{
+/*Header fijo en la parte superior.*/
+    position:fixed;
+    top:0;
+    width: 100vw;
+    height: 6rem;
+    justify-content: space-around;
+    align-items: center;
+    font-size:0.8rem;
+    font-weight: 500;
+    color:#232851;
+    background-color:#f5f5f5;
+}
+
+a{
+    text-decoration: none;
+    color:inherit;
+}
+
+ul{
+    list-style-type: none;
+}
+
+.hd-link a{
+    text-align: center;
+    margin: 0 1rem;
+    transition: all 100ms;
+}
+.hd-link a:hover{
+    opacity: 60%;
+}
+
+.hamburger{
+    display: none;
+}
+
+button{
+    width: 10rem;
+    height: 3rem;
+}
+
+.capsule{
+    background-color: #8B48BF;
+    border: none;
+    border-radius: 3rem;
+    text-align: center;
+    color:#FFFFFF;
+}
+
+.shadow{
+    box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25);
+}
+
+
+.doble-col{
+    column-count: 2;
+    column-gap: 10vw;
+}
+
+/*=====Elementos del Main (y otros relacionados)======*/
+main{
+    /*desplazar main hacia abajo segun height del header*/
+        margin-top: 6rem;
+        background-color: #f5f5f5;
+    }
+
+.padding-A{
+    
+}   
+
+.padding-A{
+    padding:0 180px;
+}
+
+.hemisferio{
+    width:50%;
+}
