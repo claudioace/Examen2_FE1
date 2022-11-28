@@ -6,7 +6,7 @@
 
 
     /*Ayuda visual. Comentar al terminar*/
-    border: 0.1px dashed red;
+    /* border: 0.1px dashed red */;
 }
 .flex-hd{
 /*este Flex es para el header. NO modificará su direction al cambiar el viewport*/
@@ -93,28 +93,42 @@ main{
     width: 100%;
 }
 
-.padding-A{
+/*ambos tienen mismo pading lateral en desktop.
+A: pasa de 180px Desk a ~60px mobile
+B: pasa de 180px desk a ~60px izq// 0 der mobile*/
+.padding-A, .padding-B{
     padding:0 180px;
 }
 
 .hemisferio{
     width:50%;
 }
-.card-cont{
+.card01-cont{
     justify-content: center;
     flex-wrap: wrap;
+    background-color: #fafafa;
 }
 
 .card01{
+  
     width: 50%;
+    padding: 1rem;
+}
+
+.card01-header{
+    align-items: center;
+}
+.card01-header-text{
+    padding-left: 2rem;
 }
 
 .card01-text{
-    padding-left:3rem;
+    padding-left:6rem;
 }
 
 
 span.capsule{ 
-    width:3rem;
-
+    width:4rem;
+    padding: 0.6rem 0;
+    align-items: center;
 }
