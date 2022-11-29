@@ -6,7 +6,7 @@
 
 
     /*Ayuda visual. Comentar al terminar*/
-    /* border: 0.1px dashed red */;
+    /* border: 0.1px dashed red; */ 
 }
 .flex-hd{
 /*este Flex es para el header. NO modificará su direction al cambiar el viewport*/
@@ -21,7 +21,23 @@
     display: flex;
     flex-direction: column;
 }
+.just-right{
+    text-align: right;
 
+}
+
+h1{
+
+}
+h2{
+
+}
+h3{
+    text-align: center;
+}
+h4{
+
+}
 /*======Elementos del Header (y otros relacionados)=====*/
 header{
 /*Header fijo en la parte superior.*/
@@ -34,7 +50,7 @@ header{
     font-size:0.8rem;
     font-weight: 500;
     color:#232851;
-    background-color:#f5f5f5;
+    background-color:white;
 }
 
 a{
@@ -62,6 +78,12 @@ ul{
 button{
     width: 10rem;
     height: 3rem;
+    cursor:pointer;
+}
+
+button:hover{
+    opacity: 70%;
+    
 }
 
 .capsule{
@@ -86,7 +108,7 @@ button{
 main{
     /*desplazar main hacia abajo segun height del header*/
         margin-top: 6rem;
-        background-color: #f5f5f5;
+        background-color: white;
     }
 
 .keep-width{
@@ -99,10 +121,22 @@ B: pasa de 180px desk a ~60px izq// 0 der mobile*/
 .padding-A, .padding-B{
     padding:0 180px;
 }
+.banner{
+    justify-content: space-between;
+    background-color: #8B48BF;
+    padding: 2rem 220px;
+}
+
 
 .hemisferio{
     width:50%;
 }
+
+.hemi-der{
+padding-left: 100px;
+
+}
+
 .card01-cont{
     justify-content: center;
     flex-wrap: wrap;
@@ -111,7 +145,7 @@ B: pasa de 180px desk a ~60px izq// 0 der mobile*/
 
 .card01{
   
-    width: 50%;
+    width: 40%;
     padding: 1rem;
 }
 
@@ -126,9 +160,41 @@ B: pasa de 180px desk a ~60px izq// 0 der mobile*/
     padding-left:6rem;
 }
 
-
 span.capsule{ 
     width:4rem;
     padding: 0.6rem 0;
     align-items: center;
+}
+.card02{
+    position:relative;
+    height: 220px;
+    margin-top:100px;
+    padding-top: 56px;
+    background-color: #fafafa;
+}
+.bubble{
+    position:absolute;
+    left:50%;
+    translate: -50% -120%;
+}
+
+
+
+@media screen and (max-width:480px){
+    .flex{
+        flex-direction: column;
+    }
+    .padding-A{
+        padding:0 60px;
+    }
+    .padding-B{
+        padding: 0 0 0 60px;
+    }
+
+    .hemisferio{
+        width: 100%;
+    }
+    .hemi-der{
+        padding-left: 0px;
+    }
 }
