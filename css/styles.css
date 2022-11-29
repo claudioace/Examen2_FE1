@@ -33,13 +33,13 @@
 
 .just-right{
     text-align: right;
-
 }
+
 .just-center{
     text-align: center;
-}.
+}
 
-h1{
+/* h1{
 
 }
 h2{
@@ -47,7 +47,7 @@ h2{
 }
 h3{
     
-}
+} */
 h4{
     font-size: 16px;
     font-weight: 700;
@@ -202,10 +202,6 @@ span.capsule{
     width:4rem;
     padding: 0.6rem 0;
     align-items: center;
-}
-
-.card02-cont{
-   
 }
 
 .card02{
