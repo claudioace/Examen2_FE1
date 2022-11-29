@@ -4,10 +4,19 @@
     margin: 0;
     font-family: 'Be Vietnam Pro', sans-serif;
 
-
     /*Ayuda visual. Comentar al terminar*/
-    /* border: 0.1px dashed red; */ 
+/*     border: 0.1px dashed red;  */
 }
+
+/*paleta de colores. Comentar en HTML al terminar*/
+#color01,#color02,#color03,#color04,#color05{color:#FFFFFF}
+#color01{background-color:#8B48BF}
+#color02{background-color:#3CDDF3}
+#color03{background-color:#1E1E26}
+#color04{background-color:#232851}
+#color05{background-color:rgb(249, 249, 249)}
+
+
 .flex-hd{
 /*este Flex es para el header. NO modificará su direction al cambiar el viewport*/
     display: flex;
@@ -15,16 +24,20 @@
 .flex{
 /*este Flex general. Modificará su direction al cambiar el viewport. de row -> column.*/
     display: flex;
-    ;
 }
+
 .flex-col{
     display: flex;
     flex-direction: column;
 }
+
 .just-right{
     text-align: right;
 
 }
+.just-center{
+    text-align: center;
+}.
 
 h1{
 
@@ -33,10 +46,13 @@ h2{
 
 }
 h3{
-    text-align: center;
+    
 }
 h4{
-
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    color: #1E1E26;
 }
 /*======Elementos del Header (y otros relacionados)=====*/
 header{
@@ -50,7 +66,7 @@ header{
     font-size:0.8rem;
     font-weight: 500;
     color:#232851;
-    background-color:white;
+    background-color:rgb(249, 249, 249);
 }
 
 a{
@@ -62,12 +78,12 @@ ul{
     list-style-type: none;
 }
 
-.hd-link a{
+li a{
     text-align: center;
     margin: 0 1rem;
-    transition: all 100ms;
+    transition: all 500ms ;
 }
-.hd-link a:hover{
+li a:hover{
     opacity: 60%;
 }
 
@@ -75,23 +91,31 @@ ul{
     display: none;
 }
 
-button{
+.btn{
     width: 10rem;
     height: 3rem;
     cursor:pointer;
+    transition: all 500ms ;
 }
 
-button:hover{
+.btn:hover{
     opacity: 70%;
-    
 }
+
 
 .capsule{
     background-color: #8B48BF;
     border: none;
     border-radius: 3rem;
     text-align: center;
-    color:#FFFFFF;
+    color:rgb(249, 249, 249);
+}
+.capsule02{
+    background-color: rgb(249, 249, 249);
+    border: none;
+    border-radius: 3rem;
+    text-align: center;
+    color:#8B48BF;
 }
 
 .shadow{
@@ -108,23 +132,36 @@ button:hover{
 main{
     /*desplazar main hacia abajo segun height del header*/
         margin-top: 6rem;
-        background-color: white;
+        background-color: rgb(249, 249, 249);
     }
 
 .keep-width{
     width: 100%;
 }
 
-/*ambos tienen mismo pading lateral en desktop.
+
+
+/*Padding que serán modificados segun desktop-mobile.
 A: pasa de 180px Desk a ~60px mobile
-B: pasa de 180px desk a ~60px izq// 0 der mobile*/
+B: pasa de 180px desk a ~60px izq// 0 der mobile
+C: pasa de 72px desk a ~18px mobile*/
+
 .padding-A, .padding-B{
-    padding:0 180px;
+/*variable según tamaño del viewport, hasta un maximo de 180px*/
+    padding:0 min(180px, 12.5vw);
+
 }
+
+.padding-C{
+/*variable según tamaño del viewport, hasta un maximo de 72px*/
+    padding:0 min(72px, 5vw);
+}
+
 .banner{
     justify-content: space-between;
     background-color: #8B48BF;
     padding: 2rem 220px;
+    color: rgb(249, 249, 249);
 }
 
 
@@ -133,7 +170,7 @@ B: pasa de 180px desk a ~60px izq// 0 der mobile*/
 }
 
 .hemi-der{
-padding-left: 100px;
+    padding-left: 100px;
 
 }
 
@@ -158,6 +195,7 @@ padding-left: 100px;
 
 .card01-text{
     padding-left:6rem;
+    color:#B3B2B7;
 }
 
 span.capsule{ 
@@ -165,9 +203,14 @@ span.capsule{
     padding: 0.6rem 0;
     align-items: center;
 }
+
+.card02-cont{
+   
+}
+
 .card02{
     position:relative;
-    height: 220px;
+    
     margin-top:100px;
     padding-top: 56px;
     background-color: #fafafa;
@@ -177,10 +220,34 @@ span.capsule{
     left:50%;
     translate: -50% -120%;
 }
+.card02-text{
+    padding:21px;
+    color:#B9B9C1;
+    font-weight: 500;
+}
+/*=======footer=======*/
+footer{
+    background-color:#1E1E26;
+    color: rgb(249, 249, 249);    
+}
+
+.organize{
+    justify-content: space-around;
+}
+
+/*este es el id del logo descargado desde figma. se debe ajustar a 110px de ancho*/
+#ord-AA{
+    width: 110px;
+}
+
+.ft-end{
+    text-align: end;
+    margin-right:160px;
+}
 
 
 
-@media screen and (max-width:480px){
+@media screen and (max-width: 480px){
     .flex{
         flex-direction: column;
     }
@@ -189,6 +256,9 @@ span.capsule{
     }
     .padding-B{
         padding: 0 0 0 60px;
+    }
+    .padding-C{
+        padding: 0 18px;
     }
 
     .hemisferio{
