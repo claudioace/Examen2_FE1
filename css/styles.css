@@ -1,3 +1,4 @@
+/*||||||||ESTILOS GENERALES|||||||*/
 *{
     box-sizing: border-box;
     padding: 0;
@@ -5,7 +6,7 @@
     font-family: 'Be Vietnam Pro', sans-serif;
 
     /*Ayuda visual. Comentar al terminar*/
-/*     border: 0.1px dashed red;  */
+    /* border: 0.1px dashed red */; 
 }
 
 /*paleta de colores. Comentar en HTML al terminar*/
@@ -21,6 +22,7 @@
 /*este Flex es para el header. NO modificará su direction al cambiar el viewport*/
     display: flex;
 }
+
 .flex{
 /*este Flex general. Modificará su direction al cambiar el viewport. de row -> column.*/
     display: flex;
@@ -39,21 +41,49 @@
     text-align: center;
 }
 
-/* h1{
-
+h1{
+    font-size: 50px;
+    font-weight: 700;
+    color:#232851; 
 }
+
 h2{
-
-}
-h3{
+    font-size: 36px;
+    font-weight: 700;
     
-} */
+}
+
+h3{
+    font-size: 39px;
+    font-weight: 700;
+    color:#232851
+}
+
 h4{
     font-size: 16px;
     font-weight: 700;
     text-align: center;
-    color: #1E1E26;
+    color: #232851;
 }
+
+/*.. Padding que serán modificados segun desktop->mobile ..
+A: pasa de 180px Desk a ~60px mobile
+B: pasa de 180px desk a ~60px izq// 0 der mobile
+C: pasa de 72px desk a ~18px mobile*/
+
+.padding-A, .padding-B{
+    /*variable según tamaño del viewport, hasta un maximo de 180px*/
+    padding-left: min(180px, 12.5vw);
+    padding-right: min(180px, 12.5vw);
+}
+    
+.padding-C{
+    /*variable según tamaño del viewport, hasta un maximo de 72px*/
+    padding-left: min(72px, 5vw);
+    padding-right: min(72px, 5vw);
+}
+
+
 /*======Elementos del Header (y otros relacionados)=====*/
 header{
 /*Header fijo en la parte superior.*/
@@ -83,12 +113,17 @@ li a{
     margin: 0 1rem;
     transition: all 500ms ;
 }
+
 li a:hover{
     opacity: 60%;
 }
 
 .hamburger{
     display: none;
+}
+
+.hamburger:hover{
+    opacity: 60%;
 }
 
 .btn{
@@ -101,7 +136,9 @@ li a:hover{
 .btn:hover{
     opacity: 70%;
 }
-
+.btn-form{
+    width:4.5rem;
+}
 
 .capsule{
     background-color: #8B48BF;
@@ -110,6 +147,7 @@ li a:hover{
     text-align: center;
     color:rgb(249, 249, 249);
 }
+
 .capsule02{
     background-color: rgb(249, 249, 249);
     border: none;
@@ -123,65 +161,63 @@ li a:hover{
 }
 
 
-.doble-col{
-    column-count: 2;
-    column-gap: 10vw;
-}
 
 /*=====Elementos del Main (y otros relacionados)======*/
 main{
     /*desplazar main hacia abajo segun height del header*/
         margin-top: 6rem;
-        background-color: rgb(249, 249, 249);
-    }
-
-.keep-width{
-    width: 100%;
+        background-color:white;
 }
 
-
-
-/*Padding que serán modificados segun desktop-mobile.
-A: pasa de 180px Desk a ~60px mobile
-B: pasa de 180px desk a ~60px izq// 0 der mobile
-C: pasa de 72px desk a ~18px mobile*/
-
-.padding-A, .padding-B{
-/*variable según tamaño del viewport, hasta un maximo de 180px*/
-    padding:0 min(180px, 12.5vw);
-
-}
-
-.padding-C{
-/*variable según tamaño del viewport, hasta un maximo de 72px*/
-    padding:0 min(72px, 5vw);
-}
-
-.banner{
-    justify-content: space-between;
-    background-color: #8B48BF;
-    padding: 2rem 220px;
-    color: rgb(249, 249, 249);
-}
-
-
+    /*...Sobre Mex Open...*/
 .hemisferio{
     width:50%;
+    align-self:center ;
 }
 
 .hemi-der{
     padding-left: 100px;
 
 }
+.ctn-01{
+    padding-top: 6rem;
+    padding-bottom: 6rem;
 
+}  
+
+/* Afecta unicamente al hemisferio derecho del contenedor01*/
+.ctn-01 .hemi-der{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.keep-width{
+    width: 100%;
+}
+
+    /*..banner sobre los PRO..*/
+.banner{
+    justify-content: space-between;
+    background-color: #8B48BF;
+    padding: 40px min(220px, 15.3vw);
+    color: rgb(249, 249, 249);
+}
+
+.banner-text{
+    font-weight: 500;
+    line-height: 24.18px;
+}
+    /*..tarjetas sobre los PRO*/
 .card01-cont{
     justify-content: center;
     flex-wrap: wrap;
     background-color: #fafafa;
+    padding:46.5px 0;
 }
 
 .card01{
-  
     width: 40%;
     padding: 1rem;
 }
@@ -189,6 +225,7 @@ C: pasa de 72px desk a ~18px mobile*/
 .card01-header{
     align-items: center;
 }
+
 .card01-header-text{
     padding-left: 2rem;
 }
@@ -196,8 +233,9 @@ C: pasa de 72px desk a ~18px mobile*/
 .card01-text{
     padding-left:6rem;
     color:#B3B2B7;
-}
 
+}
+    /*..tarjetas mejores del mes..*/
 span.capsule{ 
     width:4rem;
     padding: 0.6rem 0;
@@ -206,39 +244,84 @@ span.capsule{
 
 .card02{
     position:relative;
-    
     margin-top:100px;
     padding-top: 56px;
     background-color: #fafafa;
 }
+
 .bubble{
     position:absolute;
     left:50%;
     translate: -50% -120%;
 }
+
 .card02-text{
     padding:21px;
     color:#B9B9C1;
     font-weight: 500;
+    font-size: 16px;
+    text-align: center;
 }
+
+.best-btn{
+    margin: 45px 0 180px;
+}
+
 /*=======footer=======*/
 footer{
     background-color:#1E1E26;
-    color: rgb(249, 249, 249);    
+    color: rgb(249, 249, 249);
+    padding: 40px min(170px, 11.8vw);
 }
 
 .organize{
-    justify-content: space-around;
+    justify-content:space-between;
+
 }
 
 /*este es el id del logo descargado desde figma. se debe ajustar a 110px de ancho*/
+#ord-A{
+    padding:12px 0;
+}
+
 #ord-AA{
     width: 110px;
 }
 
+
+.doble-col{
+    width: max(344px, 27.3vw);
+    height: 184px;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    flex-wrap: wrap;
+}
+
+#ord-B li{
+    width: max(150px, 40%);
+    margin:12px 0;
+}
+
+#ord-C{
+    width:272.81px;
+}
+
+#email{
+    height: 3rem;
+    width: 73.6%;
+    padding:0 1rem;
+}
+.btn-form{
+    width: 23%;
+}
+
 .ft-end{
     text-align: end;
-    margin-right:160px;
+    font-size: 12.5px;
+    font-weight: 500;
+    color: #8C8C94;
+    
 }
 
 
@@ -248,19 +331,36 @@ footer{
         flex-direction: column;
     }
     .padding-A{
-        padding:0 60px;
+        padding-left:60px;
+        padding-right:60px;
     }
     .padding-B{
-        padding: 0 0 0 60px;
+        padding-left: 60px;
+        padding-right: 0px;
     }
     .padding-C{
-        padding: 0 18px;
+        padding-left: 18px;
+        padding-right: 18px;
     }
-
     .hemisferio{
         width: 100%;
     }
     .hemi-der{
         padding-left: 0px;
+    }
+    .mobile-hidden{
+        display: none;
+    }
+    .hamburger{
+        display: block;
+    }
+    #ord-C{
+        order:-1;
+    }
+    #ord-A{
+        order:1;
+    }
+    #ord-AB{
+        order:-1;
     }
 }
