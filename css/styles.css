@@ -31,6 +31,7 @@
 .flex-col{
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .just-right{
@@ -88,6 +89,7 @@ C: pasa de 72px desk a ~18px mobile*/
 header{
 /*Header fijo en la parte superior.*/
     position:fixed;
+    z-index: 10;
     top:0;
     width: 100vw;
     height: 6rem;
@@ -176,6 +178,7 @@ main{
 }
 
 .hemi-der{
+
     padding-left: 100px;
 
 }
@@ -191,6 +194,7 @@ main{
     flex-direction: column;
     align-items: flex-end;
     justify-content: space-between;
+    height: 454.72px;
 }
 
 .keep-width{
@@ -228,12 +232,13 @@ main{
 
 .card01-header-text{
     padding-left: 2rem;
+    padding-top:0.6rem;
+    padding-bottom:0.6rem;
 }
 
 .card01-text{
     padding-left:6rem;
     color:#B3B2B7;
-
 }
     /*..tarjetas mejores del mes..*/
 span.capsule{ 
@@ -253,6 +258,7 @@ span.capsule{
     position:absolute;
     left:50%;
     translate: -50% -120%;
+    
 }
 
 .card02-text{
@@ -261,6 +267,7 @@ span.capsule{
     font-weight: 500;
     font-size: 16px;
     text-align: center;
+    
 }
 
 .best-btn{
@@ -305,6 +312,8 @@ footer{
 
 #ord-C{
     width:272.81px;
+    display: flex;
+    justify-content: space-between;
 }
 
 #email{
@@ -323,20 +332,32 @@ footer{
     color: #8C8C94;
     
 }
+/*<<<<<<<<<<<< A N I M A C I Ó N >>>>>>>>>*/
+.ic-rrss{
+    animation-timing-function: ease-in-out;
+}
+
+.ic-rrss:hover{
+    animation-name: animacion-01;
+    animation-duration: 800ms;
+    opacity:80%
+}
 
 
 
 @media screen and (max-width: 480px){
+    /* lo que era flex row, pasa a ser flex column*/
     .flex{
         flex-direction: column;
     }
     .padding-A{
-        padding-left:60px;
-        padding-right:60px;
+        padding-left:40px;
+        padding-right:40px;
     }
     .padding-B{
-        padding-left: 60px;
+        padding-left: 34px;
         padding-right: 0px;
+
     }
     .padding-C{
         padding-left: 18px;
@@ -354,13 +375,76 @@ footer{
     .hamburger{
         display: block;
     }
+    .ctn-01{
+    row-gap: 100px;
+    }
+
+    .banner-pro{
+    padding: 40px 20px;
+    }
+
+    .card01{
+        width: 100%;
+        padding: 1rem 0;
+    }
+        .card01-header{
+        margin-left: 20px;
+        background-color: rgba(139, 72, 191, 0.3);
+        position:relative;
+        }
+        .card01-header .capsule{
+        position:absolute;
+        left:-20px;    
+        }
+        .card01-header-text{
+         padding-left: 3.5rem;
+        }
+        .card01-text{
+        padding-left:10px;
+        padding-right: 28px;
+        padding-top: 31px;
+        }
+
+    button.capsule02.btn{
+        background-color: #232851;
+        color:#fafafa;
+    }
+    .banner{
+    background-color: #3CDDF3;
+    }
+    .art-footer{
+    row-gap: 35px;
+    }
+    .art-footer h2{
+        text-align: center;
+    }
+
+    footer{
+        padding:40px 50px;
+    }
+    footer .organize{
+        row-gap: 35px;
+    }
+    
     #ord-C{
         order:-1;
+        width: 100%;
+    }
+    #ord-B{
+        order:0;
+        width: 100%;
+     
     }
     #ord-A{
         order:1;
     }
     #ord-AB{
         order:-1;
+        display:flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+    .ft-end{
+        text-align: center;
     }
 }
