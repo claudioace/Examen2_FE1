@@ -27,7 +27,6 @@
             <img src="./img/logo.svg" alt="Logo Sportit">
         </div>
 
-
         <nav>
             <ul class="flex-hd mobile-hidden" >
                 <li class="hd-link"><a href="#Sports"> Sports</a></li>
@@ -37,37 +36,38 @@
                 <li class="hd-link"><a href="#Community"> Community</a></li>
             </ul>
         </nav>
+
         <nav>   
             <a href="#Contact" class="mobile-hidden"><button type="button" class="capsule btn shadow">Contact</button></a>
         </nav>
-            <div class="hamburger">
-                <img src="./img/icon-hamburger.svg" alt="Menu Hamburguesa">
-            </div>
 
-
+        <div class="hamburger">
+            <img src="./img/icon-hamburger.svg" alt="Menu Hamburguesa">
+        </div>
         
     </header>
   
     <main>
         <article class="flex padding-A ctn-01"><!--Noticia Mexico open-->
-
             <!--Hemisferio son elementos hijo de un contenedor flex, distribuidos a la izquierda y derecha-->
             <section class="hemisferio hemi-izq">
                 <img src="./img/padel-intro.png" alt="Imagen Padel" class="keep-width">
             </section>
+
             <section class="hemisferio hemi-der just-right">
                 <h1>LIVE: Follow the Telcel Huawei Mexico Open 2022 for free </h1>
                 <p>The final Open of the 2022 World Padel Tour season is underway, don't miss out on any of the action!</p>
                 <a href="#Contact"><button type="button" class="capsule btn">Contact</button></a>
             </section>
+
         </article>
 
         <article class="flex-col"><!--sobre los PRO-->
             <div class="banner flex banner-pro">
-
                 <section class="hemisferio hemi-izq">
                     <h2>What's different between pros?</h2>
                 </section> 
+
                 <section class="hemisferio hemi-der">
                     <p class="banner-text">Manage provides all the functionality your team needs, without the complexity. Our software is tailor-made for modern digital product teams</p>
                 </section> 
@@ -79,25 +79,40 @@
                 <div class="card01">
                     <div class="card01-header flex-hd">
                         <span class="capsule">01</span>
+
                         <h4 class="card01-header-text">Track company-wide progress</h4>
+
                     </div>
+
                     <p class="card01-text">Donec elit est, mattis lacinia arcu eu, efficitur consequat augue. Nam tellus sem, tempus pellentesque egestas vitae, efficitur vel nulla. Etiam vel orci rutrum, placerat quam eget, consequat dolor.</p>
+
                 </div>
+
                 <div class="card01">
                     <div class="card01-header flex-hd">
                         <span class="capsule">02</span>
+
                         <h4 class="card01-header-text">Advance built-in reports</h4>
+
                     </div>
+
                     <p class="card01-text">Donec elit est, mattis lacinia arcu eu, efficitur consequat augue. Nam tellus sem, tempus pellentesque egestas vitae, efficitur vel nulla. Etiam vel orci rutrum, placerat quam eget, consequat dolor.</p>
+
                 </div>
                 <div class="card01">
                     <div class="card01-header flex-hd">
                         <span class="capsule">03</span>
+
                         <h4 class="card01-header-text">Everything you need in one place</h4>
+
                     </div>
+
                     <p class="card01-text">Donec elit est, mattis lacinia arcu eu, efficitur consequat augue. Nam tellus sem, tempus pellentesque egestas vitae, efficitur vel nulla. Etiam vel orci rutrum, placerat quam eget, consequat dolor.</p>
+
                 </div>
+           
             </div>
+        
         </article>
         
         <article><!--sobre los mejores del mes-->
@@ -126,13 +141,16 @@
             <div class="flex art-footer banner">
                 <section class="hemisferio hemi-izq">
                     <h2>Get to know the best teams of the year</h2>
+                
                 </section> 
                 <section class="hemisferio hemi-der just-center">
                     <a href="#Goforit"><button type="button" class="capsule02 btn shadow">Go for it</button></a>
+                
                 </section> 
+            
             </div>
+        
         </article>
-
 
     </main>
 
@@ -142,8 +160,6 @@
                 <div class="flex-col organize" id="ord-A"><!--contenedor del Logo + Social-->
                      <img src="./img/logo2.svg" alt="logo2" id="ord-AA"><!--Descargué logo2 desde figma. Tiene letras blancas-->
 
-                        
-
                     <!--ESTOS ICONOS TIENEN ANIMACIÓN-->
                     <p id="ord-AB" class="just-center">
                         <a href="https://www.facebook.com/"><img src="./img/icon-facebook.svg" alt="icono-Facebook" class="ic-rrss"></a>
@@ -152,6 +168,7 @@
                         <a href="https://www.pinterest.com/"><img src="./img/icon-pinterest.svg" alt="icono-Pinterest" class="ic-rrss"></a>
                         <a href="https://www.instagram.com/"><img src="./img/icon-instagram.svg" alt="icono-Instagram" class="ic-rrss"></a>
                     </p>
+
                 </div>
                 <ul class="doble-col" id="ord-B"><!--contenedor de los links-->
                     <li><a href="#Pricing"> Home</a></li>
@@ -166,11 +183,12 @@
                 <form action="./form/form.php" class="just-right" id="ord-C"><!--formulario-->
                     <input type="email" name="email" class="capsule02" id="email" placeholder="Update in your inbox...">
                     <input type="submit" value="Go" class="capsule btn btn-form">
+
                 </form>
+
             </nav>
 
             <p class="ft-end">Copyright 2020. All Rights Reserved</p>
-
             
     </footer>
 
@@ -183,3 +201,59 @@
 
 </body>
 </html>
+
+<!--index de clases e identificadores
+.flex	 = 	Elementos FLEX:ROW. Al cambiar a mobile, tambien cambia a FLEX-COLUMN
+.flex-hd	 = 	Elementos FLEX, pero que no cambian en mobile. Principalmente para headers
+.flex-col	 = 	Elementos FLEX:COLUMN
+.logo	 = 	Logo de sportit
+.mobile-hidden	 = 	Elementos que desaparecen al cambiar a mobile
+.hd-link	 = 	Link o enlaces que están en el header
+.capsule	 = 	Diseño visual: ovalado, color morado letras blancas.
+.btn	 = 	Elementos que se comportan como botón clickable
+.shadow	 = 	Elementos que tienen sombra
+.hamburger	 = 	Ícono del menu hambuerguesa
+.padding-A	 = 	Padding lateral. Al cambiar a mobile, es menor
+.padding-B	 = 	Padding lateral. Al cambiar a mobile, es menor Y solo afecta al lado izquierdo
+.padding-C	 = 	Padding lateral. Al cambiar a mobile, es menor
+.ctn-01	 = 	Contenedor del articulo "Noticias mex open"
+.hemisferio	 = 	Par de elementos hijos de un FLEX. Ambos miden 50% ancho. En desktop se ubican horizontal. En mobile se ubican vertical.
+.hemi-izq	 = 	Hijo de .hemisferio. En desktop se ubica a la izquierda; al cambiar a mobile, se ubica arriba
+.hemi-der	 = 	Hijo de .hemisferio. En desktop se ubica a la derecha; al cambiar a mobile, se ubica abajo
+.just-right	 = 	Elementos no-flex que tienen contenido hijo alineado a la derecha (es una clase para el contenedor padre)
+.banner	 = 	Elementos que se muestran como un "banner". Fondo morado, letras blancas.
+.banner-pro	 = 	Banner del articulo "las diferencias entre los PRO"
+.banner-text	 = 	Elementos de texto al interior de un banner
+.card01-cont	 = 	Contenedor de las tarjetas numeradas
+.card01	 = 	Tarjeta numerada
+.card01-header	 = 	Header de la tarjeta numerada
+.card01-header-text	 = 	Texto en el header de la tarjeta numerada
+.cad01-text	 = 	Texto principal de la tarjeta numerada
+.article-header	 = 	Elementos Header de un articulo
+.just-center	 = 	Elementos no-flex que tienen contenido hijo alineado al centro (es una clase para el contenedor padre)
+.card02-cont	 = 	Contenedor de las tarjetas de jugadores
+.card02	 = 	Tarjeta de los jugadores
+.card02-text	 = 	Texto principal de la tarjeta de los jugadores
+.bubble	 = 	Imagen de perfil de los jugadores
+.best-btn	 = 	Boton de la seccion "Sobre los pro"
+.art-footer	 = 	Elementos footer  de un articulo
+.capsule02	 = 	Diseño visual: ovalado, color blanco letras moradas.
+.organize	 = 	Elemento contenedor de contenido-hijo que será ordenado (es una clase para el contenedor padre)
+.ic-rrss	 = 	Elemento ícono de redes sociales
+.doble-col	 = 	Exlusivo para elementos de una lista: Separa la lista en dos columnas
+.btn-form	 = 	Elementos que se comportan como botón de formulario.
+.ft-end	 = 	Último elemento del footer
+#ord-A	 = 	Hijo de .organize. En desktop es el primero desde la izq. En mobile cambia su orden
+#ord-AA	 = 	Hijo de #ord-A. En desktop va arriba. En mobile cambia su orden
+#ord-AB	 = 	Hijo de #ord-A. En desktop va abajo. En mobile cambia su orden
+#ord-B	 = 	Hijo de .organize. En desktop es el segundo desde la izq. En mobile cambia su orden
+#ord-C	 = 	Hijo de .organize. En desktop es el tercero desde la izq. En mobile cambia su orden
+#email	 = 	Campo de entrada EMAIL de formulario
+#color01	 = 	Solo para probar color Violeta
+#color02	 = 	Solo para probar color Celeste Brillante
+#color03	 = 	Solo para probar color Azul grisáceo oscuro
+#color04	 = 	Solo para probar color Azul muy oscuro
+#color05	 = 	Solo para probar color Variante gris claro
+    
+
+-->

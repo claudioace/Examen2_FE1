@@ -67,11 +67,11 @@ h4{
     color: #232851;
 }
 
+
 /*.. Padding que serán modificados segun desktop->mobile ..
 A: pasa de 180px Desk a ~60px mobile
 B: pasa de 180px desk a ~60px izq// 0 der mobile
 C: pasa de 72px desk a ~18px mobile*/
-
 .padding-A, .padding-B{
     /*variable según tamaño del viewport, hasta un maximo de 180px*/
     padding-left: min(180px, 12.5vw);
@@ -132,12 +132,18 @@ li a:hover{
     width: 10rem;
     height: 3rem;
     cursor:pointer;
-    transition: all 500ms ;
+    transition: all 500ms;
+    animation-timing-function: linear;
 }
-
+/*<<<<<<<<<<<< A N I M A C I Ó N >>>>>>>>>*/
 .btn:hover{
     opacity: 70%;
+    animation-name: animacion-02;
+    animation-duration: 120ms;
+    animation-iteration-count: infinite;   
+    opacity:80%
 }
+
 .btn-form{
     width:4.5rem;
 }
@@ -194,7 +200,7 @@ main{
     flex-direction: column;
     align-items: flex-end;
     justify-content: space-between;
-    height: 454.72px;
+    height: 100%;
 }
 
 .keep-width{
@@ -213,7 +219,7 @@ main{
     font-weight: 500;
     line-height: 24.18px;
 }
-    /*..tarjetas sobre los PRO*/
+    /*..tarjetas sobre los PRO..*/
 .card01-cont{
     justify-content: center;
     flex-wrap: wrap;
@@ -258,7 +264,6 @@ span.capsule{
     position:absolute;
     left:50%;
     translate: -50% -120%;
-    
 }
 
 .card02-text{
@@ -267,7 +272,6 @@ span.capsule{
     font-weight: 500;
     font-size: 16px;
     text-align: center;
-    
 }
 
 .best-btn{
@@ -283,7 +287,6 @@ footer{
 
 .organize{
     justify-content:space-between;
-
 }
 
 /*este es el id del logo descargado desde figma. se debe ajustar a 110px de ancho*/
@@ -321,6 +324,7 @@ footer{
     width: 73.6%;
     padding:0 1rem;
 }
+
 .btn-form{
     width: 23%;
 }
@@ -330,13 +334,12 @@ footer{
     font-size: 12.5px;
     font-weight: 500;
     color: #8C8C94;
-    
 }
-/*<<<<<<<<<<<< A N I M A C I Ó N >>>>>>>>>*/
+
 .ic-rrss{
     animation-timing-function: ease-in-out;
 }
-
+/*<<<<<<<<<<<< A N I M A C I Ó N >>>>>>>>>*/
 .ic-rrss:hover{
     animation-name: animacion-01;
     animation-duration: 800ms;
@@ -357,7 +360,6 @@ footer{
     .padding-B{
         padding-left: 34px;
         padding-right: 0px;
-
     }
     .padding-C{
         padding-left: 18px;
@@ -376,11 +378,11 @@ footer{
         display: block;
     }
     .ctn-01{
-    row-gap: 100px;
+        row-gap: 100px;
     }
 
     .banner-pro{
-    padding: 40px 20px;
+        padding: 40px 20px;
     }
 
     .card01{
@@ -410,10 +412,10 @@ footer{
         color:#fafafa;
     }
     .banner{
-    background-color: #3CDDF3;
+        background-color: #3CDDF3;
     }
     .art-footer{
-    row-gap: 35px;
+        row-gap: 35px;
     }
     .art-footer h2{
         text-align: center;

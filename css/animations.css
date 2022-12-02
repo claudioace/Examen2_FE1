@@ -1,11 +1,21 @@
-
 /*Animación: giro y "fade-in"*/
+@keyframes animacion-01 {
+  from {
+        transform: rotate(0turn) scale(130%);
+        opacity: 40%;
+        }
 
-@keyframes animacion-01{
-    from {transform: rotate(0turn) scale(130%);
-            opacity: 40%;}
-    
-    
-    to {transform: rotate(1turn) scale(100%);
-        opacity:80%}
+  to {
+        transform: rotate(1turn) scale(100%);
+        opacity: 80%;
+        }
+}
+
+/*Animación: Tiembla*/
+@keyframes animacion-02 {
+  0% {transform: rotate(0deg)}
+  20% {transform: rotate(1deg)}
+  40% {transform: rotate(0deg)}
+  80% {transform: rotate(-1deg)}
+  100% {transform: rotate(0deg)}
 }
